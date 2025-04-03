@@ -1,12 +1,12 @@
 {
-  "name": "mantis-material-free-react",
+  "name": "pharmacity",
   "version": "1.4.1",
   "private": false,
-  "homepage": "https://mantisdashboard.io/free",
+  "homepage": "/#",
   "author": {
-    "name": "CodedThemes",
-    "email": "codedthemes@gmail.com",
-    "url": "https://codedthemes.com/"
+    "name": "Slivi M",
+    "email": "masengesho@gmail.com",
+    "url": "/#"
   },
   "scripts": {
     "start": "vite",
