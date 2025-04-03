@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
+import { Typography } from '@mui/material';
 
 // project imports
 import DrawerHeaderStyled from './DrawerHeaderStyled';
-import Logo from 'components/logo';
 
 // ==============================|| DRAWER HEADER ||============================== //
 
@@ -15,10 +15,39 @@ export default function DrawerHeader({ open }) {
         width: 'initial',
         paddingTop: '8px',
         paddingBottom: '8px',
-        paddingLeft: open ? '24px' : 0
+        paddingLeft: open ? '24px' : 0,
+        display: 'flex',
+        alignItems: 'center'
       }}
     >
-      <Logo isIcon={!open} sx={{ width: open ? 'auto' : 35, height: 35 }} />
+      {open ? (
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: 600,
+            color: 'inherit',
+            textTransform: 'none',
+            marginLeft: 1
+          }}
+        >
+          Pharmacity
+        </Typography>
+      ) : (
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: 600,
+            color: 'inherit',
+            width: 35,
+            height: 35,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          P
+        </Typography>
+      )}
     </DrawerHeaderStyled>
   );
 }

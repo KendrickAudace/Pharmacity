@@ -32,7 +32,7 @@ import '@fontsource/public-sans/600.css';
 import '@fontsource/public-sans/700.css';
 
 // project imports
-import App from './App';
+import App from './App/';
 import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root');

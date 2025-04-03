@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Typography } from '@mui/material';
 
 // material-ui
 import Grid from '@mui/material/Grid2';
@@ -6,7 +7,6 @@ import Box from '@mui/material/Box';
 
 // project imports
 import AuthFooter from 'components/cards/AuthFooter';
-import Logo from 'components/logo';
 import AuthCard from './AuthCard';
 
 // assets
@@ -20,7 +20,22 @@ export default function AuthWrapper({ children }) {
       <AuthBackground />
       <Grid container direction="column" justifyContent="flex-end" sx={{ minHeight: '100vh' }}>
         <Grid sx={{ px: 3, mt: 3 }} size={12}>
-          <Logo to="/" />
+          <Typography
+            component="a"
+            href="/"
+            variant="h3"
+            sx={{
+              display: 'block',
+              textDecoration: 'none',
+              fontWeight: 700,
+              color: 'primary.main',
+              '&:hover': {
+                color: 'primary.dark'
+              }
+            }}
+          >
+            Pharmacity
+          </Typography>
         </Grid>
         <Grid size={12}>
           <Grid

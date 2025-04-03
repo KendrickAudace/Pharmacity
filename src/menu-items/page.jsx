@@ -1,36 +1,57 @@
 // assets
-import { LoginOutlined, ProfileOutlined } from '@ant-design/icons';
+import { MedicineBoxOutlined, UserOutlined, ShopOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 
 // icons
 const icons = {
-  LoginOutlined,
-  ProfileOutlined
+  medicine: MedicineBoxOutlined,
+  customer: UserOutlined,
+  supplier: ShopOutlined,
+  purchase: ShoppingCartOutlined
 };
+
+// Menu items configuration
+const menuItems = [
+  {
+    id: 'medicine',
+    title: 'Medicine',
+    type: 'item',
+    url: '/medecine',
+    icon: icons.medicine,
+    target: true
+  },
+  {
+    id: 'customer',
+    title: 'Customer',
+    type: 'item',
+    url: '/customer',
+    icon: icons.customer,
+    target: true
+  },
+  {
+    id: 'supplier',
+    title: 'Supplier',
+    type: 'item',
+    url: '/supplier',
+    icon: icons.supplier,
+    target: true
+  },
+  {
+    id: 'purchase',
+    title: 'Purchase',
+    type: 'item',
+    url: '/purchase',
+    icon: icons.purchase,
+    target: true
+  }
+];
 
 // ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
 
 const pages = {
-  id: 'authentication',
-  title: 'Authentication',
+  id: 'inventory',
+  title: 'Inventory Management',
   type: 'group',
-  children: [
-    {
-      id: 'login1',
-      title: 'Login',
-      type: 'item',
-      url: '/login',
-      icon: icons.LoginOutlined,
-      target: true
-    },
-    {
-      id: 'register1',
-      title: 'Register',
-      type: 'item',
-      url: '/register',
-      icon: icons.ProfileOutlined,
-      target: true
-    }
-  ]
+  children: menuItems
 };
 
 export default pages;

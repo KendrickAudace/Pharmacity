@@ -1,36 +1,53 @@
 // assets
-import { ChromeOutlined, QuestionOutlined } from '@ant-design/icons';
+import { 
+  SettingOutlined, 
+  QuestionCircleOutlined,
+  CustomerServiceOutlined,
+  FileTextOutlined 
+} from '@ant-design/icons';
 
-// icons
+// icons mapping
 const icons = {
-  ChromeOutlined,
-  QuestionOutlined
+  settings: SettingOutlined,
+  help: QuestionCircleOutlined,
+  support: CustomerServiceOutlined,
+  documentation: FileTextOutlined
 };
 
-// ==============================|| MENU ITEMS - SAMPLE PAGE & DOCUMENTATION ||============================== //
+// Support menu items configuration
+const supportItems = [
+  {
+    id: 'store-settings',
+    title: 'Store Settings',
+    type: 'item',
+    url: '/settings',
+    icon: icons.settings
+  },
+  {
+    id: 'help-center',
+    title: 'Help Center',
+    type: 'item',
+    url: '/help',
+    icon: icons.help
+  },
+  {
+    id: 'documentation',
+    title: 'Documentation',
+    type: 'item',
+    url: 'https://codedthemes.gitbook.io/mantis/',
+    icon: icons.documentation,
+    external: true,
+    target: true
+  }
+];
+
+// ==============================|| MENU ITEMS - SUPPORT ||============================== //
 
 const support = {
   id: 'support',
   title: 'Support',
   type: 'group',
-  children: [
-    {
-      id: 'sample-page',
-      title: 'Sample Page',
-      type: 'item',
-      url: '/sample-page',
-      icon: icons.ChromeOutlined
-    },
-    {
-      id: 'documentation',
-      title: 'Documentation',
-      type: 'item',
-      url: 'https://codedthemes.gitbook.io/mantis/',
-      icon: icons.QuestionOutlined,
-      external: true,
-      target: true
-    }
-  ]
+  children: supportItems
 };
 
 export default support;

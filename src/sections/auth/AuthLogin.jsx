@@ -45,8 +45,8 @@ export default function AuthLogin({ isDemo = false }) {
     <>
       <Formik
         initialValues={{
-          email: 'info@codedthemes.com',
-          password: '123456',
+          email: 'admin@gmail.com',
+          password: '123',
           submit: null
         }}
         validationSchema={Yup.object().shape({
@@ -136,9 +136,11 @@ export default function AuthLogin({ isDemo = false }) {
               </Grid>
               <Grid size={12}>
                 <AnimateButton>
-                  <Button fullWidth size="large" variant="contained" color="primary">
-                    Login
-                  </Button>
+                  <Link component={RouterLink} to="/dashboard/default">
+                    <Button fullWidth size="large" variant="contained" color="primary">
+                      Login
+                    </Button>
+                  </Link>
                 </AnimateButton>
               </Grid>
             </Grid>
